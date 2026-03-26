@@ -11,6 +11,9 @@ class AIController extends Controller
     public function chat(Request $request) {
         $response = Gemini::text()->prompt($request->input('message'))->generate();
 
-        return response()->json([$response->content()]);
+        return response()->json([
+                'status' => 'OK',
+                'data' => $response->content()
+            ]);
     }
 }
