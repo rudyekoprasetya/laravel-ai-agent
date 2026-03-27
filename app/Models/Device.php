@@ -14,8 +14,8 @@ class Device extends Model
         'name'
     ];
 
-    public function sensordata() 
+    public function sensors() 
     {
-        return $this->hasMany(SensorData::class);
+        return $this->hasMany(Sensor::class);
     }
 }

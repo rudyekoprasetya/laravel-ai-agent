@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sensor_datas', function (Blueprint $table) {
+        Schema::create('sensors', function (Blueprint $table) {
             $table->id();
             $table->foreignId('device_id');
             $table->float('sensor_data');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sensor_data');
+        Schema::dropIfExists('sensors');
     }
 };
